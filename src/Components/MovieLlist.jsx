@@ -19,13 +19,14 @@ const MovieList = () => {
 
   useEffect(() => {
     getData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
 
   console.log(MoviesData);
 
   return (
     <div className='mx-[8%]'>
-      <h2 className='text-4xl font-extrabold'>{type ? type.toUpperCase() : "Popular"}</h2>
+      <h2 className=' my-5 text-4xl font-extrabold'>{type ? type.toUpperCase() : "Popular"}</h2>
       <div className='flex flex-wrap justify-center my-5'>
         {MoviesData.map((movList, index) => (
           <Card key={index} movie={movList} />

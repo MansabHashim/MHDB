@@ -5,6 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import MovieList from "../../Components/MovieLlist";
 
 const Home = () => {
 
@@ -36,7 +37,7 @@ const Home = () => {
             {PopularMovie.map((movie, index)=>(   
                 // <img src={movie} alt="" />
                 <Link key={index} className="relative" to={`/movie/${movie.id}`}>
-                <div  className="z-[1] w-full opacity-30  md:h-[70vh] flex justify-center  mb-10">
+                <div  className="z-[1] w-full items-start opacity-30  md:h-[70vh] flex justify-center  mb-10">
                     <img className="  bg-pink-400 shadow-[5px 5px 5px 5px ] shadow-white rounded" src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} alt={movie.original_title} />
                 </div>
                 <div className="md:w-[70vw] w-[70vw] flex flex-col md:gap-5  absolute top-[20vh] md:[25vh]  lg:top-[30vh] text-start ml-[5vw]">
@@ -46,9 +47,11 @@ const Home = () => {
                     <h1 className="  text-white md:text-lg hidden text-sm  md:flex ">{movie ? movie.overview : ""}    </h1>
                 </div>
                 </Link>
+                
                   ))}
         </Carousel>
     </div>
+    <MovieList/>
     </>
   )
 }
