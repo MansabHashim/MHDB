@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // import React from 'react'
-import SkeletonCard from 'react-loading-skeleton'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
@@ -23,7 +24,14 @@ useEffect(() => {
 return ( <>  
 
    
-    {Loading ? <SkeletonCard/> :
+    {Loading ? 
+     <div className=' inline-block transform duration-2 relative rounded overflow-hidden m-2 cursor-pointer min-w-[200px] z-0 border-red-600 '>
+     <SkeletonTheme highlightColor="#222">
+   
+         <Skeleton height={200} width={300} count={3} duration={3} />
+     </SkeletonTheme>
+   </div>
+    :
 
     <div id='parent' className=' relative  mx-2 bg--800 my-2 hover:scale-105 transition duration-200 ease-out hover:ease-in '>
         <Link className='flex' to={`/movie/${movie.id}`}>
