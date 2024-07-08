@@ -35,14 +35,14 @@ const Home = () => {
         >
             {PopularMovie.map((movie, index)=>(   
                 // <img src={movie} alt="" />
-                <Link key={index} className="relative">
+                <Link key={index} className="relative" to={`/movie/${movie.id}`}>
                 <div  className="z-[1] w-full opacity-30  md:h-[70vh] flex justify-center  mb-10">
-                    <img className="mix-blend-multiply bg-pink-400 shadow-[5px 5px 5px 5px ] shadow-white rounded" src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} alt={movie.original_title} />
+                    <img className="  bg-pink-400 shadow-[5px 5px 5px 5px ] shadow-white rounded" src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} alt={movie.original_title} />
                 </div>
                 <div className="md:w-[70vw] w-[70vw] flex flex-col md:gap-5  absolute top-[20vh] md:[25vh]  lg:top-[30vh] text-start ml-[5vw]">
                     <h1 className="  text-white lg:text-7xl md:text-5xl text-4xl font-bold ">{movie ? movie.title : ""}</h1>
-                   <div className="flex gap-5 items-center"> <h1 className=" text-white text-xl font-medium ">{movie ? movie.release_date : ""}</h1>
-                   <h1 className=" text-white text-2xl font-bold ">{movie ? movie.vote_average : ""} <FontAwesomeIcon className=" text-yellow-400" icon={faStar} /></h1></div>
+                   <div className="flex gap-5 items-center object-center"> <h1 className=" text-white text-xl font-medium ">{movie ? movie.release_date : ""}</h1>
+                   <h1 className=" text-white text-2xl font-bold ">{movie ? movie.vote_average.toFixed(1) : ""} <FontAwesomeIcon className=" text-yellow-400 text-lg items-center pb-[4px]  " icon={faStar} /></h1></div>
                     <h1 className="  text-white md:text-lg hidden text-sm  md:flex ">{movie ? movie.overview : ""}    </h1>
                 </div>
                 </Link>

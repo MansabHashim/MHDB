@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Header from "./Components/Header"
 import Home from "./Pages/Homepage/Home"
 // import { useEffect, useState } from "react"
-
+import Card from "./Components/Card"
+import MovieLlist from "./Components/MovieLlist"
 
 const App = () => {
 
@@ -14,8 +15,8 @@ const App = () => {
         <Header/>
         <Routes>
           <Route index element={<Home/>}></Route>
-          <Route path="movie/:id" element={<h1>Movie details page</h1>}></Route>
-          <Route path="movies/:type" element={<h1>hi</h1>}></Route>
+          <Route path="movie/:id" element={<Card/>}></Route>
+          <Route path="movies/:type" element={<MovieLlist/>}></Route>
           <Route path="/*" element={<h1>Error Page</h1>}></Route>
         </Routes>
       </Router>

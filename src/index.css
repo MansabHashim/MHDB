@@ -11,3 +11,8 @@ body{
 a:hover{
   color: #f5c518;
 }
+
+#parent:hover .yourchild {
+  display:block;
+  
+}
