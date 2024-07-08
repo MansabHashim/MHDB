@@ -8,20 +8,22 @@ const MovieList = () => {
   const api_key = "eae72c634b24b667d684e951e8f90281";
 
   const getData = async () => {
-    try {
+    
       const res = await fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=${api_key}`);
       const data = await res.json();
       setMoviesData(data.results);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    
   };
+
+  
+  useEffect(() => {
+    getData();
+  }, []);
 
   useEffect(() => {
     getData();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
-
   console.log(MoviesData);
 
   return (
