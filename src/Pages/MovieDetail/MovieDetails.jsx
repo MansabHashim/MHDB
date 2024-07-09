@@ -28,6 +28,9 @@ const MovieDetails = () => {
       .then((res) => res.json())
       .then((data) => setCurrentMovieDetails(data));
   };
+
+
+  
   return (
     <div >
       <div className=" h-[full] md:mb-[5%]">
@@ -51,7 +54,7 @@ const MovieDetails = () => {
             <div className=" md:w-[60vw] flex  flex-col gap-5 bg-gray-700 p-5 rounded-md">
               <h1 className="text-4xl font-extrabold">{title}</h1>
               <p className=" text-lg font-medium">{tagline}</p>
-              <div className="flex gap-5"><p className=" text-lg font-medium">{vote_average}⭐</p> <p className=" text-lg font-medium">({vote_count}) Votes</p></div>
+              <div className="flex gap-5"><p className=" text-lg font-medium">{vote_average && vote_average.toFixed(1)}⭐</p> <p className=" text-lg font-medium">({vote_count}) Votes</p></div>
               <p className=" text-lg font-medium">{runtime} mins</p>
               <p className=" text-lg font-medium">Release Data: {release_date}</p>
             </div>

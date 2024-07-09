@@ -40,7 +40,7 @@ const Home = () => {
             {PopularMovie.map((movie, index)=>(   
                 // <img src={movie} alt="" />
                 <Link key={index} className="relative" to={`/movie/${movie.id}`}>
-                <div  className="z-[1] w-full items-start opacity-30  md:h-[70vh] flex justify-center  mb-">
+                <div  className="z-[1] w-full items-start opacity-30  md:h-[70vh] flex  justify-center  mb-">
                     <img className="  bg-pink-400 shadow-[5px 5px 5px 5px ] shadow-white rounded" src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} alt={movie.original_title} />
                 </div>
                 <div className="md:w-[70vw] w-[90vw] flex flex-col md:gap-5  absolute top-[13vh] md:[25vh]  lg:top-[30vh] text-start ml-[2vw]">
