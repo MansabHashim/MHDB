@@ -30,11 +30,11 @@ const Home = () => {
     <>
     <div className="poster">
         <Carousel
-        showThumbs={false}
+        showThumbs={true}
         autoPlay={true}
-        transitionTime={6}
+        transitionTime={3}
         infiniteLoop={true}
-        showStatus={false}
+        showStatus={true}
         >
             {PopularMovie.map((movie, index)=>(   
                 // <img src={movie} alt="" />
