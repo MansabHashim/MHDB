@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import MovieList from "../../Components/MovieLlist";
+import TopRatedMovies from "../Top_Rated/TopRatedMovies"
+import UpcomingMovies from "../Upcoming/UpcomingMovies"
 
 const Home = () => {
 
@@ -52,6 +54,8 @@ const Home = () => {
         </Carousel>
     </div>
     <MovieList/>
+    <TopRatedMovies/>
+    <UpcomingMovies/>
     </>
   )
 }

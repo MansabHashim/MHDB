@@ -6,15 +6,6 @@ const MovieList = () => {
   const [MoviesData, setMoviesData] = useState([]);
   const { type } = useParams();
   const api_key = "eae72c634b24b667d684e951e8f90281";
-
-  const getData = async () => {
-    
-      const res = await fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=${api_key}`);
-      const data = await res.json();
-      setMoviesData(data.results);
-    
-  };
-
   
   useEffect(() => {
     getData();
@@ -24,7 +15,23 @@ const MovieList = () => {
     getData();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [type]);
-  console.log(MoviesData);
+  // console.log(MoviesData);
+
+
+
+
+
+
+  const getData = async () => {
+    
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${type ? type : "popular"}?api_key=${api_key}`);
+    const data = await res.json();
+    setMoviesData(data.results);
+  
+};
+
+
+
 
   return (
     <div className='mx-[8%]'>

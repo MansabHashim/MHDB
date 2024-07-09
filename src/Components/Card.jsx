@@ -41,7 +41,7 @@ return ( <>
                 <h2 className='  text-lg font-bold'>{movie.title.slice(0, 24)}</h2>
                <div className='flex gap-5'>
                <h2>{movie.release_date}</h2>
-               <h2>{movie.vote_average.toFixed(1)}</h2>
+               <h2>{movie.vote_average.toFixed(1)}⭐</h2>
                </div>
                 <p>{movie.overview.slice(0, 60)}...</p>
             </div>
