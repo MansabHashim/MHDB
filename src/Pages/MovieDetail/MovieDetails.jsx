@@ -62,7 +62,7 @@ const MovieDetails = () => {
             </div>
             <div className=" mx-[%] p-5 items-center justify-  gap-5 flex">
           <button className=" bg-yellow-400 px-5 py-3 text-black text-lg font-bold rounded-xl"><a className=" hover:text-white" target="blank" href={homepage}>Movie Page</a></button>
-          <button className=" bg-yellow-400 px-5 py-3 text-black text-lg font-bold rounded-xl"><a className=" hover:text-white" target="blank" href={`https://www.imdb.com/title/${imdb_id}/`}>Movie Page</a></button>
+          <button className=" bg-yellow-400 px-5 py-3 text-black text-lg font-bold rounded-xl"><a className=" hover:text-white" target="blank" href={`https://www.imdb.com/title/${imdb_id}/`}>IMDB Page</a></button>
         </div>
       <div className=" mx-5">Made With ❤️ By <span className=" text-yellow-300 font-bold">Mansab Hashim</span></div>
           </div>
