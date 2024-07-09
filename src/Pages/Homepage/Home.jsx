@@ -43,7 +43,7 @@ const Home = () => {
                 <div  className="z-[1] w-full items-start opacity-30  md:h-[70vh] flex justify-center  mb-">
                     <img className="  bg-pink-400 shadow-[5px 5px 5px 5px ] shadow-white rounded" src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} alt={movie.original_title} />
                 </div>
-                <div className="md:w-[70vw] w-[90vw] flex flex-col md:gap-5  absolute top-[15vh] md:[25vh]  lg:top-[30vh] text-start ml-[2vw]">
+                <div className="md:w-[70vw] w-[90vw] flex flex-col md:gap-5  absolute top-[12vh] md:[25vh]  lg:top-[30vh] text-start ml-[2vw]">
                     <h1 className="  text-white lg:text-7xl md:text-5xl leading-7 mb-1 text-[30px] font-bold ">{movie ? movie.title : ""}</h1>
                    <div className="flex gap-5 items-center object-center"> <h1 className=" text-white md:text-lg text-md font-medium ">{movie ? movie.release_date : ""}</h1>
                    <h1 className=" text-white md:text-2xl text-md font-bold ">{movie ? movie.vote_average.toFixed(1) : ""} <FontAwesomeIcon className=" text-yellow-400 text-lg items-center pb-[4px]  " icon={faStar} /></h1></div>
